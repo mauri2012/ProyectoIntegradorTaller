@@ -35,16 +35,20 @@
             BRestaurar = new PictureBox();
             BCerrar = new PictureBox();
             LBienvenido = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            TUsuario = new TextBox();
+            TContraseña = new TextBox();
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            panel7 = new Panel();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BMaximizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BEsconder).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BCerrar).BeginInit();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // panel3
@@ -106,38 +110,42 @@
             // 
             // LBienvenido
             // 
-            LBienvenido.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            LBienvenido.Anchor = AnchorStyles.Top;
             LBienvenido.AutoSize = true;
             LBienvenido.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            LBienvenido.Location = new Point(313, 116);
+            LBienvenido.Location = new Point(130, 81);
             LBienvenido.Name = "LBienvenido";
             LBienvenido.Size = new Size(97, 18);
             LBienvenido.TabIndex = 3;
             LBienvenido.Text = "Bienvenido";
             // 
-            // textBox1
+            // TUsuario
             // 
-            textBox1.BackColor = Color.Snow;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(271, 181);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(198, 23);
-            textBox1.TabIndex = 4;
+            TUsuario.Anchor = AnchorStyles.Top;
+            TUsuario.BackColor = Color.Snow;
+            TUsuario.BorderStyle = BorderStyle.FixedSingle;
+            TUsuario.Location = new Point(85, 132);
+            TUsuario.Name = "TUsuario";
+            TUsuario.Size = new Size(198, 23);
+            TUsuario.TabIndex = 4;
             // 
-            // textBox2
+            // TContraseña
             // 
-            textBox2.BackColor = Color.Snow;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(271, 235);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(198, 23);
-            textBox2.TabIndex = 5;
+            TContraseña.Anchor = AnchorStyles.Top;
+            TContraseña.BackColor = Color.Snow;
+            TContraseña.BorderStyle = BorderStyle.FixedSingle;
+            TContraseña.Location = new Point(85, 208);
+            TContraseña.Name = "TContraseña";
+            TContraseña.PasswordChar = '*';
+            TContraseña.Size = new Size(198, 23);
+            TContraseña.TabIndex = 5;
+            TContraseña.TextChanged += textBox2_TextChanged;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Location = new Point(271, 163);
+            label1.Location = new Point(85, 114);
             label1.Name = "label1";
             label1.Size = new Size(47, 15);
             label1.TabIndex = 6;
@@ -145,8 +153,9 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
-            label2.Location = new Point(271, 217);
+            label2.Location = new Point(85, 190);
             label2.Name = "label2";
             label2.Size = new Size(67, 15);
             label2.TabIndex = 7;
@@ -154,14 +163,45 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Top;
             button1.BackColor = Color.FromArgb(17, 97, 238);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(271, 302);
+            button1.Location = new Point(85, 252);
             button1.Name = "button1";
             button1.Size = new Size(198, 38);
             button1.TabIndex = 8;
             button1.Text = "Log In";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            panel5.Dock = DockStyle.Left;
+            panel5.Location = new Point(0, 37);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(209, 413);
+            panel5.TabIndex = 9;
+            // 
+            // panel6
+            // 
+            panel6.Dock = DockStyle.Right;
+            panel6.Location = new Point(600, 37);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(200, 413);
+            panel6.TabIndex = 10;
+            // 
+            // panel7
+            // 
+            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            panel7.Controls.Add(button1);
+            panel7.Controls.Add(LBienvenido);
+            panel7.Controls.Add(label2);
+            panel7.Controls.Add(label1);
+            panel7.Controls.Add(TContraseña);
+            panel7.Controls.Add(TUsuario);
+            panel7.Location = new Point(209, 37);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(391, 413);
+            panel7.TabIndex = 11;
             // 
             // Form1
             // 
@@ -169,12 +209,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(LBienvenido);
+            Controls.Add(panel7);
+            Controls.Add(panel6);
+            Controls.Add(panel5);
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
@@ -185,8 +222,9 @@
             ((System.ComponentModel.ISupportInitialize)BEsconder).EndInit();
             ((System.ComponentModel.ISupportInitialize)BRestaurar).EndInit();
             ((System.ComponentModel.ISupportInitialize)BCerrar).EndInit();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -206,5 +244,10 @@
         private Label label1;
         private Label label2;
         private Button button1;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
+        private TextBox TUsuario;
+        private TextBox TContraseña;
     }
 }
