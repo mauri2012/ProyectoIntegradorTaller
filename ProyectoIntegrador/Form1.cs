@@ -1,3 +1,5 @@
+using ProyectoIntegrador.formularios;
+
 namespace ProyectoIntegrador
 {
     public partial class Form1 : Form
@@ -6,17 +8,6 @@ namespace ProyectoIntegrador
         {
             InitializeComponent();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -40,15 +31,12 @@ namespace ProyectoIntegrador
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void Line_Click(object sender, EventArgs e)
+        private void BInicioSesion_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            
+            AdminMenu menu = new AdminMenu();
+            menu.Show();
+            this.Hide();
         }
     }
 }
