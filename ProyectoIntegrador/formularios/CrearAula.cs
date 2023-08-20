@@ -45,6 +45,19 @@ namespace ProyectoIntegrador.formularios
             Application.Exit();
         }
 
+        private void BCrearAula_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void BCapacidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es un número (0-9), retroceso o una tecla de control.
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, suprime la pulsación de tecla.
+                e.Handled = true;
+            }
+        }
     }
 }

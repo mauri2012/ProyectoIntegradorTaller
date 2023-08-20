@@ -139,7 +139,6 @@
             TContraseña.PasswordChar = '*';
             TContraseña.Size = new Size(198, 23);
             TContraseña.TabIndex = 5;
-         
             // 
             // label1
             // 
@@ -217,7 +216,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             Text = "Form1";
-            
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)BMaximizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)BEsconder).EndInit();

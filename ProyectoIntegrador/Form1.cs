@@ -33,7 +33,7 @@ namespace ProyectoIntegrador
         }
         private void BInicioSesion_Click(object sender, EventArgs e)
         {
-            
+
             AdminMenu menu = new AdminMenu();
             menu.Show();
             this.Hide();

@@ -21,23 +21,29 @@
             BRestaurar = new PictureBox();
             BCerrar = new PictureBox();
             panel7 = new Panel();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
+            comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             label5 = new Label();
             label6 = new Label();
-            textBox2 = new TextBox();
+            BCapacidad = new TextBox();
             panel2 = new Panel();
             BCrearAula = new Button();
             panel1 = new Panel();
             label2 = new Label();
             label4 = new Label();
             TUsuario = new TextBox();
-            comboBox2 = new ComboBox();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BMaximizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BEsconder).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BRestaurar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BCerrar).BeginInit();
             panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -122,11 +128,15 @@
             // panel7
             // 
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            panel7.Controls.Add(pictureBox2);
+            panel7.Controls.Add(pictureBox1);
+            panel7.Controls.Add(checkBox2);
+            panel7.Controls.Add(checkBox1);
             panel7.Controls.Add(comboBox2);
             panel7.Controls.Add(comboBox1);
             panel7.Controls.Add(label5);
             panel7.Controls.Add(label6);
-            panel7.Controls.Add(textBox2);
+            panel7.Controls.Add(BCapacidad);
             panel7.Controls.Add(panel2);
             panel7.Controls.Add(panel1);
             panel7.Controls.Add(label2);
@@ -136,6 +146,54 @@
             panel7.Name = "panel7";
             panel7.Size = new Size(800, 413);
             panel7.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Group;
+            pictureBox2.Location = new Point(493, 242);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(22, 15);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 23;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Location;
+            pictureBox1.Location = new Point(493, 184);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(16, 20);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 22;
+            pictureBox1.TabStop = false;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(289, 341);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(77, 19);
+            checkBox2.TabIndex = 21;
+            checkBox2.Text = "Proyector";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(289, 316);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(131, 19);
+            checkBox1.TabIndex = 20;
+            checkBox1.Text = "Aire Acondicionado";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(289, 287);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(198, 23);
+            comboBox2.TabIndex = 19;
             // 
             // comboBox1
             // 
@@ -165,15 +223,16 @@
             label6.TabIndex = 16;
             label6.Text = "Capacidad";
             // 
-            // textBox2
+            // BCapacidad
             // 
-            textBox2.Anchor = AnchorStyles.Top;
-            textBox2.BackColor = Color.Snow;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(289, 234);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(198, 23);
-            textBox2.TabIndex = 14;
+            BCapacidad.Anchor = AnchorStyles.Top;
+            BCapacidad.BackColor = Color.Snow;
+            BCapacidad.BorderStyle = BorderStyle.FixedSingle;
+            BCapacidad.Location = new Point(289, 234);
+            BCapacidad.Name = "BCapacidad";
+            BCapacidad.Size = new Size(198, 23);
+            BCapacidad.TabIndex = 14;
+            BCapacidad.KeyPress += BCapacidad_KeyPress;
             // 
             // panel2
             // 
@@ -187,6 +246,7 @@
             // BCrearAula
             // 
             BCrearAula.BackColor = Color.FromArgb(17, 97, 238);
+            BCrearAula.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             BCrearAula.ForeColor = Color.White;
             BCrearAula.Location = new Point(18, 354);
             BCrearAula.Name = "BCrearAula";
@@ -194,6 +254,7 @@
             BCrearAula.TabIndex = 4;
             BCrearAula.Text = "Crear Aula";
             BCrearAula.UseVisualStyleBackColor = false;
+            BCrearAula.Click += BCrearAula_Click;
             // 
             // panel1
             // 
@@ -207,7 +268,7 @@
             // 
             label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
-            label2.Location = new Point(289, 154);
+            label2.Location = new Point(289, 163);
             label2.Name = "label2";
             label2.Size = new Size(60, 15);
             label2.TabIndex = 11;
@@ -217,7 +278,7 @@
             // 
             label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
-            label4.Location = new Point(289, 92);
+            label4.Location = new Point(289, 101);
             label4.Name = "label4";
             label4.Size = new Size(51, 15);
             label4.TabIndex = 10;
@@ -232,14 +293,6 @@
             TUsuario.Name = "TUsuario";
             TUsuario.Size = new Size(198, 23);
             TUsuario.TabIndex = 8;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(289, 287);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(198, 23);
-            comboBox2.TabIndex = 19;
             // 
             // CrearAula
             // 
@@ -260,6 +313,8 @@
             ((System.ComponentModel.ISupportInitialize)BCerrar).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -273,7 +328,7 @@
         private PictureBox BEsconder;
         private PictureBox BMaximizar;
         private PictureBox BRestaurar;
-        private TextBox textBox2;
+        private TextBox BCapacidad;
         private Panel panel7;
         private Label label3;
         private Label label1;
@@ -285,6 +340,10 @@
         private Label label5;
         private Label label6;
         private ComboBox comboBox2;
+        private CheckBox checkBox2;
+        private CheckBox checkBox1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 
     #region Windows Form Designer generated code
