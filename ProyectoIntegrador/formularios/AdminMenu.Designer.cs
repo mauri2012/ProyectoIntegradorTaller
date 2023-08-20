@@ -38,6 +38,8 @@
             LBienvenido = new Label();
             panel7 = new Panel();
             dataGridView1 = new DataGridView();
+            label1 = new Label();
+            BCrearAula = new Button();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BMaximizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BEsconder).BeginInit();
@@ -50,6 +52,7 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(17, 97, 238);
+            panel3.Controls.Add(label1);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(BMaximizar);
             panel3.Controls.Add(BEsconder);
@@ -122,6 +125,7 @@
             // panel7
             // 
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            panel7.Controls.Add(BCrearAula);
             panel7.Controls.Add(LBienvenido);
             panel7.Controls.Add(dataGridView1);
             panel7.Location = new Point(0, 37);
@@ -135,12 +139,36 @@
             dataGridView1.BackgroundColor = SystemColors.ButtonFace;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = SystemColors.ButtonFace;
-            dataGridView1.Location = new Point(12, 101);
+            dataGridView1.Location = new Point(43, 101);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(736, 180);
+            dataGridView1.Size = new Size(754, 180);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellFormatting += DataGridView1_CellFormatting;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(361, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 19);
+            label1.TabIndex = 7;
+            label1.Text = "Home";
+            // 
+            // BCrearAula
+            // 
+            BCrearAula.BackColor = Color.FromArgb(17, 97, 238);
+            BCrearAula.ForeColor = Color.White;
+            BCrearAula.Location = new Point(604, 355);
+            BCrearAula.Name = "BCrearAula";
+            BCrearAula.Size = new Size(184, 31);
+            BCrearAula.TabIndex = 4;
+            BCrearAula.Text = "Crear Aula";
+            BCrearAula.UseVisualStyleBackColor = false;
             // 
             // AdminMenu
             // 
@@ -155,6 +183,7 @@
             Text = "Menu";
             Load += AdminMenu_Load;
             panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BMaximizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)BEsconder).EndInit();
             ((System.ComponentModel.ISupportInitialize)BRestaurar).EndInit();
@@ -180,6 +209,8 @@
         private Panel panel7;
         private Label label3;
         private DataGridView dataGridView1;
+        private Label label1;
+        private Button BCrearAula;
     }
 
     #endregion

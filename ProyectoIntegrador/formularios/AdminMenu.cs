@@ -67,7 +67,7 @@ namespace ProyectoIntegrador.formularios
             buttonColumn1.Name = "Reservar"; // Name the column
             buttonColumn1.Text = "Nueva Reserva";    // Text for buttons in the column
             buttonColumn1.UseColumnTextForButtonValue = true; // Display the Text value on buttons
-            dataGridView1.Columns.Add(buttonColumn1);
+
 
 
 
@@ -75,20 +75,40 @@ namespace ProyectoIntegrador.formularios
             buttonColumn2.Name = "Informe"; // Name the column
             buttonColumn2.Text = "Nuevo Informe";    // Text for buttons in the column
             buttonColumn2.UseColumnTextForButtonValue = true; // Display the Text value on buttons
-            dataGridView1.Columns.Add(buttonColumn2)
-                ;
+
+            ;
             DataGridViewButtonColumn buttonColumn3 = new DataGridViewButtonColumn();
             buttonColumn3.Name = "Editar"; // Name the column
             buttonColumn3.Text = "Editar";    // Text for buttons in the column
             buttonColumn3.UseColumnTextForButtonValue = true; // Display the Text value on buttons
-            dataGridView1.Columns.Add(buttonColumn3);
+
 
             DataGridViewButtonColumn buttonColumn4 = new DataGridViewButtonColumn();
             buttonColumn4.Name = "Eliminar"; // Name the column
             buttonColumn4.Text = "Eliminar";    // Text for buttons in the column
             buttonColumn4.UseColumnTextForButtonValue = true; // Display the Text value on buttons
+
+            dataGridView1.Columns.Add(buttonColumn1);
+            dataGridView1.Columns.Add(buttonColumn2);
+            dataGridView1.Columns.Add(buttonColumn3);
             dataGridView1.Columns.Add(buttonColumn4);
+
         }
+        private void DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn column = dataGridView1.Columns[e.ColumnIndex];
+                if (column is DataGridViewButtonColumn && column.Name == "Reservar")
+                {
+                    DataGridViewButtonCell buttonCell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewButtonCell;
+                    buttonCell.Style.BackColor = Color.Green;
+                    //buttonCell.Style.ForeColor = Color.White;
+
+                }
+            }
+        }
+
     }
     public class Item
     {

@@ -63,9 +63,69 @@ namespace ProyectoIntegrador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3d_fluency_delete_folder__1_ {
+            get {
+                object obj = ResourceManager.GetObject("3d-fluency-delete-folder (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_bursts_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bursts-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_full_screen_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-full-screen-24 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_minus_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-minus-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap transistor_black_letter_x_1 {
             get {
                 object obj = ResourceManager.GetObject("transistor-black-letter-x-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transistor_black_letter_x_1__1_ {
+            get {
+                object obj = ResourceManager.GetObject("transistor-black-letter-x-1 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transistor_black_letter_x_1__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("transistor-black-letter-x-1 (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
