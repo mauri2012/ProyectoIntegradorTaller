@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="formularios\EditarAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formularios\ProfesorMenu.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>

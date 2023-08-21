@@ -92,6 +92,7 @@
             BMaximizar.Size = new Size(15, 15);
             BMaximizar.TabIndex = 5;
             BMaximizar.TabStop = false;
+            BMaximizar.Click += BMaximizar_Click;
             // 
             // BEsconder
             // 
@@ -102,6 +103,7 @@
             BEsconder.Size = new Size(15, 15);
             BEsconder.TabIndex = 4;
             BEsconder.TabStop = false;
+            BEsconder.Click += BEsconder_Click;
             // 
             // BRestaurar
             // 
@@ -112,6 +114,7 @@
             BRestaurar.Size = new Size(15, 15);
             BRestaurar.TabIndex = 6;
             BRestaurar.TabStop = false;
+            BRestaurar.Click += BRestaurar_Click;
             // 
             // BCerrar
             // 

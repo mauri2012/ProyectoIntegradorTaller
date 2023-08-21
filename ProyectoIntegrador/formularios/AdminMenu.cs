@@ -19,8 +19,8 @@ namespace ProyectoIntegrador.formularios
             List<Item> staticData = new List<Item>()
             {
 
-                new Item{Id=1, Name= "Aula 5",Lugar="9 de julio", CapacidadMax=40 },
-                new Item{Id=2, Name= "Aula Magna",Lugar = "libertad",CapacidadMax=100},
+                new Item{Id=1, Name= "Aula 5",Lugar="9 de julio", CapacidadMax=40,Tipo="Normal" },
+                new Item{Id=2, Name= "Aula Magna",Lugar = "libertad",CapacidadMax=100,Tipo = "Magna"},
             };
             dataGridView1.DataSource = staticData;
         }
@@ -58,7 +58,31 @@ namespace ProyectoIntegrador.formularios
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Verificar si el clic ocurrió en la columna "Informe"
+                if (dataGridView1.Columns[e.ColumnIndex].Name == "Informe")
+                {
+                    // Realizar la acción correspondiente al botón "Informe"
+                    // Por ejemplo, abrir un formulario para generar un nuevo informe
+                    // Puedes obtener datos del DataGridView usando dataGridView1.Rows[e.RowIndex].Cells[columnIndex].Value
+                    // Y luego realizar la acción correspondiente
+                }
+                // Verificar si el clic ocurrió en la columna "Reservar"
+                else if (dataGridView1.Columns[e.ColumnIndex].Name == "Reservar")
+                {
+                    ReservarAula reserva = new ReservarAula();
+                    reserva.Show();
+                    // Realizar la acción correspondiente al botón "Reservar"
+                    // Por ejemplo, abrir un formulario para realizar una nueva reserva
+                }
+                else if (dataGridView1.Columns[e.ColumnIndex].Name == "Editar")
+                {
+                    EditarAula aula = new EditarAula((int)dataGridView1.Rows[e.RowIndex].Cells[0].Value,(string)dataGridView1.Rows[e.RowIndex].Cells[1].Value, (string)dataGridView1.Rows[e.RowIndex].Cells[2].Value, (int)dataGridView1.Rows[e.RowIndex].Cells[3].Value,(string)dataGridView1.Rows[e.RowIndex].Cells[4].Value);
+                    aula.Show();
+                    
+                }
+            }
         }
         private void AdminMenu_Load(object sender, EventArgs e)
         {
@@ -122,6 +146,6 @@ namespace ProyectoIntegrador.formularios
         public string Name { get; set; }
         public string Lugar { get; set; }
         public int CapacidadMax { get; set; }
-
+        public string Tipo { get; set; }
     }
 }
