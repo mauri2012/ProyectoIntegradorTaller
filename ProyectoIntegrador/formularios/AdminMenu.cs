@@ -109,6 +109,12 @@ namespace ProyectoIntegrador.formularios
             }
         }
 
+        private void BCrearAula_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CrearAula aula=new CrearAula();
+            aula.Show();
+        }
     }
     public class Item
     {

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
             panel3 = new Panel();
+            label1 = new Label();
             label3 = new Label();
             BMaximizar = new PictureBox();
             BEsconder = new PictureBox();
@@ -37,9 +38,8 @@
             BCerrar = new PictureBox();
             LBienvenido = new Label();
             panel7 = new Panel();
-            dataGridView1 = new DataGridView();
-            label1 = new Label();
             BCrearAula = new Button();
+            dataGridView1 = new DataGridView();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BMaximizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)BEsconder).BeginInit();
@@ -63,6 +63,18 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(800, 37);
             panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(361, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 19);
+            label1.TabIndex = 7;
+            label1.Text = "Home";
             // 
             // label3
             // 
@@ -133,6 +145,18 @@
             panel7.Size = new Size(800, 413);
             panel7.TabIndex = 11;
             // 
+            // BCrearAula
+            // 
+            BCrearAula.BackColor = Color.FromArgb(17, 97, 238);
+            BCrearAula.ForeColor = Color.White;
+            BCrearAula.Location = new Point(604, 355);
+            BCrearAula.Name = "BCrearAula";
+            BCrearAula.Size = new Size(184, 31);
+            BCrearAula.TabIndex = 4;
+            BCrearAula.Text = "Crear Aula";
+            BCrearAula.UseVisualStyleBackColor = false;
+            BCrearAula.Click += BCrearAula_Click;
+            // 
             // dataGridView1
             // 
             dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -146,29 +170,6 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellFormatting += DataGridView1_CellFormatting;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(361, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(54, 19);
-            label1.TabIndex = 7;
-            label1.Text = "Home";
-            // 
-            // BCrearAula
-            // 
-            BCrearAula.BackColor = Color.FromArgb(17, 97, 238);
-            BCrearAula.ForeColor = Color.White;
-            BCrearAula.Location = new Point(604, 355);
-            BCrearAula.Name = "BCrearAula";
-            BCrearAula.Size = new Size(184, 31);
-            BCrearAula.TabIndex = 4;
-            BCrearAula.Text = "Crear Aula";
-            BCrearAula.UseVisualStyleBackColor = false;
             // 
             // AdminMenu
             // 
