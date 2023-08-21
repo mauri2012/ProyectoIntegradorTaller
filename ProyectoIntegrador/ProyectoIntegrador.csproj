@@ -9,10 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="formularios\EditarAula.cs">
+    <Compile Update="Views\EditarAula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="formularios\ProfesorMenu.cs" />
+    <Compile Update="Views\ProfesorMenu.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -25,6 +25,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
