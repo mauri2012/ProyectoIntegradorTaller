@@ -89,7 +89,7 @@ namespace ProyectoIntegrador.formularios
         private void BReservarAula_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ReservarAula reserva =new ReservarAula();
+            Reporte reserva =new Reporte();
             reserva.Show();
         }
     }

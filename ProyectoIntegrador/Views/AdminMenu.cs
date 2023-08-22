@@ -63,10 +63,13 @@ namespace ProyectoIntegrador.formularios
                 // Verificar si el clic ocurrió en la columna "Informe"
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "Informe")
                 {
+
                     // Realizar la acción correspondiente al botón "Informe"
                     // Por ejemplo, abrir un formulario para generar un nuevo informe
                     // Puedes obtener datos del DataGridView usando dataGridView1.Rows[e.RowIndex].Cells[columnIndex].Value
                     // Y luego realizar la acción correspondiente
+                    Reporte unReporte = new Reporte();
+                    unReporte.Show();
                 }
                 // Verificar si el clic ocurrió en la columna "Reservar"
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "Reservar")
