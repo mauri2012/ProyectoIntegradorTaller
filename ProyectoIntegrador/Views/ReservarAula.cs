@@ -45,7 +45,7 @@ namespace ProyectoIntegrador.formularios
 
         private void BCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+              this.Close();
         }
 
     }
